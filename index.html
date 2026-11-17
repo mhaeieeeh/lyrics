@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        let display=document.getElementById('display')
+        for(i=99;i>=1; i--){
+        //  display.innerHTML+=`<p>${i}</P>`
+            let next=i-1
+            display.innerHTML+=`<p>${i} bottles of beer on the wall,${i} bottles of beer.</P>`
+                display.innerHTML+=`<p>Take one down and pass it around,${next} bottles of beer on the wall.</P>`
+                    if(next==0){
+                        display.innerHTML+=`<p>No more bottles of beer on the wall,no more bottles of beer. Go to the store and buy some more,99 bottles of beer on the wall</P>`
+                    }
+        }
+    </script>
+</body>
+</html>
